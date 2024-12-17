@@ -1,0 +1,20 @@
+.container {
+  --max-width: 390px;
+  width: min(var(--max-width), 100% - var(px-base));
+  margin-inline: auto;
+  border: 1px solid blueviolet;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 80em;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+}

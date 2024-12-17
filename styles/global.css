@@ -33,6 +33,8 @@
   --fs-md: 0.875rem;
 
   --ff-base: "Inter", sans-serif;
+
+  --px-base: 2rem;
 }
 
 html {

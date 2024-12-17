@@ -1,0 +1,25 @@
+.btn {
+  --btn-bg-color: var(--color-brand);
+  --btn-color: var(--color-white);
+
+  border: 0;
+  background-color: transparent;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.75rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+
+  cursor: pointer;
+
+  font: var(--fw-semibold) var(--fs-base) / 0.2 var(--ff-inter);
+
+  background-color: var(--btn-bg-color);
+  color: var(--btn-color);
+
+  &:hover {
+    --btn-bg-color: var(--color-brand-hover);
+  }
+}
