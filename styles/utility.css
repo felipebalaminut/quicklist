@@ -1,12 +1,16 @@
 .container {
   --max-width: 390px;
-  width: min(var(--max-width), 100% - var(px-base));
+  width: min(var(--max-width), 100% - var(--px-base) * 2);
   margin-inline: auto;
-  border: 1px solid blueviolet;
+  /* border: 1px solid blueviolet; */
 }
 
 .desktop-only {
   display: none;
+}
+
+.show-deteteItem {
+  display: block;
 }
 
 @media (width >= 80em) {

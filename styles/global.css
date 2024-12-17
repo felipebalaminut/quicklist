@@ -10,7 +10,7 @@
 }
 
 :root {
-  --background-primary: ##f4f5fb;
+  --background-primary: #f4f5fb;
   --color-white: #ffffff;
 
   --color-brand: #ca3884;
@@ -22,7 +22,7 @@
 
   --content-primary: #080b12;
   --content-secondary: #374151;
-  --content-tertiary: ##9ca3af;
+  --content-tertiary: #9ca3af;
 
   --fw-bold: 700;
   --fw-semi: 600;
@@ -44,12 +44,20 @@ html {
 }
 
 body {
-  background-color: var(--background-primary)
+  background-color: var(--background-primary);
+}
+
+h1 {
+  font: var(--fw-bold) var(--fs-lg) / 1.3 var(--ff-base);
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+ul[role="list"] {
+  list-style: none;
 }
 
 img {

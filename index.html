@@ -15,14 +15,54 @@
     />
   </head>
   <body>
-    <main>
+    <main class="container">
       <header>
         <img class="desktop-only" src="assets/logo.svg" alt="logo" />
       </header>
 
-      <section class="list">
-        
-      </section>
+      <div class="back">
+        <img src="assets/icons/arrow-u-down-left.svg" alt="" />
+        <span><a href="">Voltar</a></span>
+      </div>
+
+      <h1>Compras da semana</h1>
+
+      <div class="input-wrapper">
+        <!-- VISUALIZAR NOVAMENTE -->
+        <input type="text" placeholder="Adicione um novo item" />
+        <a href="#" class="btn">Adicionar item</a>
+      </div>
+
+      <!-- LISTA -->
+      <ul role="list">
+        <li>
+          <input
+            type="checkbox"
+            value="Pão de forma"
+            id="item-1"
+            name="items"
+          />
+          <label for="item-1">Pão de forma</label>
+          <a class="trash" href=""></a>
+        </li>
+
+        <li>
+          <input
+            type="checkbox"
+            value="Suco de laranja"
+            id="item-2"
+            name="items"
+          />
+          <label for="item-2">Suco de laranja</label>
+          <a class="trash" href=""></a>
+        </li>
+      </ul>
+
+      <div id="alert">
+        <img src="assets/icons/warning-circle.svg" alt="warning-circle icon" />
+        <span>O item foi removido da lista</span>
+        <img src="assets/icons/delete.svg" alt="delete icon" />
+      </div>
     </main>
   </body>
 </html>

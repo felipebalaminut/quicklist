@@ -10,11 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: fit-content;
 
   cursor: pointer;
 
-  font: var(--fw-semibold) var(--fs-base) / 0.2 var(--ff-inter);
+  font: var(--fw-semi) var(--fs-base) / 1.4 var(--ff-base);
 
   background-color: var(--btn-bg-color);
   color: var(--btn-color);
