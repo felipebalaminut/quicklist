@@ -29,40 +29,47 @@
 
       <div class="input-wrapper">
         <!-- VISUALIZAR NOVAMENTE -->
-        <input type="text" placeholder="Adicione um novo item" />
+        <input
+          type="text"
+          id="task-input"
+          name="task"
+          placeholder="Adicione um novo item"
+        />
         <a href="#" class="btn">Adicionar item</a>
       </div>
 
       <!-- LISTA -->
       <ul role="list">
-        <li>
+        <li class="hidden">
           <input
             type="checkbox"
-            value="Pão de forma"
-            id="item-1"
+            value="textToChange"
+            id="item-0"
             name="items"
           />
-          <label for="item-1">Pão de forma</label>
+          <label for="item-0"></label>
           <a class="trash" href=""></a>
         </li>
 
-        <li>
+        <li class="hidden">
           <input
             type="checkbox"
-            value="Suco de laranja"
-            id="item-2"
+            value="textToChange"
+            id="item-1"
             name="items"
           />
-          <label for="item-2">Suco de laranja</label>
+          <label for="item-1"></label>
           <a class="trash" href=""></a>
         </li>
       </ul>
 
-      <div id="alert">
+      <div id="alert" class="hidden">
         <img src="assets/icons/warning-circle.svg" alt="warning-circle icon" />
         <span>O item foi removido da lista</span>
         <img src="assets/icons/delete.svg" alt="delete icon" />
       </div>
     </main>
+
+    <script src="scripts.js"></script>
   </body>
 </html>

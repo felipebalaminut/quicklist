@@ -156,8 +156,6 @@ main #alert {
   font: var(--fw-semi) var(--ff-base) / 1.25 var(--ff-base);
   color: var(--color-white);
 
-  display: none;
-
   & span {
     flex: 1;
   }
