@@ -1,28 +1,40 @@
+const inputTask = document.querySelector("#task-input");
 const btn = document.querySelector(".btn");
 const ul = document.querySelector("ul");
+let taskCount = ul.querySelectorAll("li:not(.hidden)").length;
 
-// Adicionando um novo item após o clique do botão.
-btn.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  const inputTask = document.querySelector("#task-input");
-  value = inputTask.value;
+function addTask() {
+  // verifica se tem alguma entrada
+  const value = inputTask.value;
 
   if (!value) return;
 
+  // Clonando o primeiro <li>
   const li = ul.querySelector("li").cloneNode(true);
   li.querySelector("label").textContent = value;
+
+  // Insere o <li> dentro da  <ul>
   ul.appendChild(li);
 
-  // Definindo o número de elementos <li> dentro da <ul>
-  const taskCount = ul.querySelectorAll("li").length;
+  taskCount = taskCount + 1;
 
   const input = li.querySelector("input");
-  input.id = `item-${taskCount}`;
+  const idName = `item-${taskCount}`;
 
-  li.querySelector("label").setAttribute("for", `item-${taskCount}`);
+  input.id = idName;
+  input.value = idName;
 
-  li.classList.remove("hidden")
+  li.querySelector("label").setAttribute("for", idName);
+
+  li.classList.remove("hidden");
 
   inputTask.value = "";
+}
+
+btn.addEventListener("click", addTask);
+
+inputTask.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    addTask();
+  }
 });
