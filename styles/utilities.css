@@ -1,0 +1,25 @@
+.container {
+  --max-width: 325px;
+  width: min(
+    var(--max-width),
+    100% - var(--px-lg) * 2 /* | mobile:  100% - 32px * 2 |  */
+  );
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 627px;
+  }
+
+  .even-columns {
+    grid-auto-flow: column;
+    gap: 0.1rem;
+  }
+}

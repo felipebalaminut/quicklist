@@ -33,6 +33,8 @@
   --fs-lg: 1.5rem;
   --fs-md: 1rem;
   --fs-sm: 0.875rem;
+
+  --px-lg: 2rem;
 }
 
 html {
@@ -54,4 +56,8 @@ h1 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+ul[role-list] {
+  list-style: none;
 }
