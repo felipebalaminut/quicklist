@@ -5,12 +5,16 @@
     100% - var(--px-lg) * 2 /* | mobile:  100% - 32px * 2 |  */
   );
   margin: 0 auto;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 .even-columns {
   display: grid;
   gap: 1rem;
+}
+
+.desktop-only {
+  display: none;
 }
 
 @media (width >= 80em) {
@@ -21,5 +25,9 @@
   .even-columns {
     grid-auto-flow: column;
     gap: 0.1rem;
+  }
+
+  .desktop-only {
+    display: initial;
   }
 }

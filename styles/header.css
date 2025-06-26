@@ -1,0 +1,15 @@
+header {
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-block: 1.5rem 4rem;
+  }
+
+  .back {
+    margin-bottom: 1rem;
+
+    & span {
+      color: var(--color-brand);
+    }
+  }
+}
