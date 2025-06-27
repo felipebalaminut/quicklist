@@ -1,0 +1,26 @@
+footer.alert {
+  margin-top: 2.25rem;
+  background-color: var(--color-danger);
+  border-radius: 0.75rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.75rem;
+
+  & span {
+    flex: 1;
+
+    /* font */
+    color: var(--background-secondary);
+    line-height: 1.25;
+  }
+
+  & button.delete-alert {
+    all: unset;
+    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
