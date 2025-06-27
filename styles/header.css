@@ -10,6 +10,11 @@ header {
 
     & span {
       color: var(--color-brand);
+      line-height: 114%;
+
+      &:hover {
+        font-weight: 600;
+      }
     }
   }
 }

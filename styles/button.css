@@ -5,19 +5,20 @@
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  outline: none;
 
   /* Button shape */
   --btn-bg-color: var(--color-brand);
   background-color: var(--btn-bg-color);
   border-radius: 0.75rem;
   padding: 0.75rem 1.5rem;
-  cursor: pointer;
 
   /* font */
   color: var(--background-secondary);
   font: 600 var(--fs-md) / 125% var(--ff-inter);
 
-  &:hover {
+  &:hover,
+  &:focus {
     --btn-bg-color: var(--color-brand-hover);
   }
 }

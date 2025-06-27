@@ -5,7 +5,7 @@
     100% - var(--px-lg) * 2 /* | mobile:  100% - 32px * 2 |  */
   );
   margin: 0 auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .even-columns {
@@ -15,6 +15,14 @@
 
 .desktop-only {
   display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap1 {
+  gap: 1rem;
 }
 
 @media (width >= 80em) {

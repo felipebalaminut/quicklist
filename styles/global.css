@@ -41,7 +41,7 @@ html {
   /* Default font */
   font-family: var(--ff-inter);
   font-size: var(--fs-md);
-  font-weight: var(--ff-base);
+  font-weight: 500;
   color: var(--content-primary);
 }
 
@@ -53,11 +53,15 @@ h1 {
   font: 700 var(--fs-lg) / 135% var(--ff-inter);
 }
 
+button {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-ul[role-list] {
+ul[role="list"] {
   list-style: none;
 }
