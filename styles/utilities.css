@@ -25,6 +25,11 @@
   gap: 1rem;
 }
 
+.show-alert {
+  margin-top: 2.25rem;
+  display: flex;
+}
+
 @media (width >= 80em) {
   .container {
     --max-width: 627px;
