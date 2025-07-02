@@ -20,6 +20,7 @@ input[type="text"] {
 
   &::placeholder {
     color: var(--content-tertiary);
+    opacity: 0.8;
   }
 
   &:hover {
@@ -35,6 +36,14 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
   margin-block: 3rem 2.5rem;
+}
+
+.error {
+  border: 1px solid var(--color-danger) !important;
+
+  &::placeholder {
+    color: var(--color-danger) !important;
+  }
 }
 
 @media (width >= 80em) {

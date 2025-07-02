@@ -1,4 +1,6 @@
 footer {
+  margin-top: 2.25rem;
+
   background-color: var(--color-danger);
   border-radius: 0.75rem;
 
