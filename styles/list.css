@@ -37,6 +37,11 @@ ul[role="list"] {
       background-image: url(../assets/icons/checkbox-checked.svg);
     }
 
+    &:has(:checked) label {
+      text-decoration: line-through;
+      opacity: 0.85;
+    }
+
     & label {
       flex: 1;
 

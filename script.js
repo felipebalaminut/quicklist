@@ -1,5 +1,6 @@
 const inputElement = document.querySelector("input[type='text']");
 const addItemsButton = document.querySelector("button.btn");
+const inputCheckbox = document.querySelector("input[type='checkbox']");
 
 function validateInput() {
   return inputElement.value.trim() !== ""; // void = false / hasContent = true
@@ -17,6 +18,7 @@ function handleAddItems() {
 
   const template = document.getElementById("template");
   const clone = template.content.cloneNode(true);
+  const deleteButton = clone.querySelector("button.delete");
 
   const input = clone.querySelector("input");
   input.setAttribute("id", `item-${contador}`);
@@ -25,6 +27,7 @@ function handleAddItems() {
   contador++;
 
   label.innerText = inputElement.value;
+  inputElement.value = "";
 
   document.querySelector("ul").appendChild(clone); // Adicionando Clone na <ul>
 }
@@ -38,8 +41,25 @@ function handleInputChange() {
   }
 }
 
-// Chama a função "handleAddTask" no click do botão.
-addItemsButton.addEventListener("click", () => handleAddItems());
+function deleteItemsButton(event) {
+  const item = event.target.closest("button");
+  if (item) {
+    item.closest("li").remove();
+  }
+}
 
-// Chama a função "handleInputChange"
-inputElement.addEventListener("change", () => handleInputChange());
+// CHama a função "handleAddTask" ao apertar "Enter"
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    handleAddItems();
+  }
+});
+
+// Chama a função "handleAddTask" no click do botão.
+addItemsButton.addEventListener("click", handleAddItems);
+
+// Chama a função "handleInputChange" após um evento no inputElement
+inputElement.addEventListener("change", handleInputChange);
+
+// Chama a função "deleteItemsButton" após um clique no botão de lixeira.
+document.querySelector("ul").addEventListener("click", deleteItemsButton);
