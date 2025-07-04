@@ -1,6 +1,7 @@
 const inputElement = document.querySelector("input[type='text']");
 const addItemsButton = document.querySelector("button.btn");
 const inputCheckbox = document.querySelector("input[type='checkbox']");
+const deleteAlert = document.querySelector("button.delete-alert");
 
 function validateInput() {
   return inputElement.value.trim() !== ""; // void = false / hasContent = true
@@ -29,7 +30,7 @@ function handleAddItems() {
   label.innerText = inputElement.value;
   inputElement.value = "";
 
-  document.querySelector("ul").appendChild(clone); // Adicionando Clone na <ul>
+  document.querySelector("ul").prepend(clone); // Adicionando Clone na <ul>
 }
 
 // Captar alguma "entrada" no input.
@@ -45,6 +46,17 @@ function deleteItemsButton(event) {
   const item = event.target.closest("button");
   if (item) {
     item.closest("li").remove();
+
+    const footer = document.querySelector("footer");
+    footer.classList.add("show-alert");
+
+    setTimeout(() => {
+      footer.classList.remove("show-alert");
+    }, 2000);
+
+    deleteAlert.addEventListener("click", () => {
+      footer.classList.remove("show-alert");
+    });
   }
 }
 
